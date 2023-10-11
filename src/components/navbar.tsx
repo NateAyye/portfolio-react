@@ -1,3 +1,4 @@
+import { useAppContext } from '@/context/use-context';
 import useScroll from '@/hooks/use-scroll';
 import { navbarLinks } from '@/lib/constants';
 import { cn } from '@/lib/utils';
@@ -6,13 +7,12 @@ import { Link, useLocation } from 'react-router-dom';
 import { ModeToggle } from './mode-toggle';
 import { Button } from './ui/button';
 
-interface NavbarProps {
-  setHeaderHeight: (height: number) => void;
-}
+interface NavbarProps {}
 
-const Navbar: React.FC<NavbarProps> = ({ setHeaderHeight }) => {
+const Navbar: React.FC<NavbarProps> = () => {
+  const { setHeaderHeight } = useAppContext();
   const location = useLocation();
-  const { direction } = useScroll(20);
+  const { direction, position } = useScroll(20);
   const headerRef = React.useRef<HTMLHeadElement>(null);
 
   useEffect(() => {
@@ -34,8 +34,20 @@ const Navbar: React.FC<NavbarProps> = ({ setHeaderHeight }) => {
       >
         Skip to main content
       </a>
-      <div className="max-w-screen-3xl mx-auto flex items-center gap-3 px-3 py-1">
-        <nav className="flex flex-1 justify-between items-center">
+      <div
+        className={cn(
+          'max-w-screen-3xl mx-auto flex items-center rounded-lg gap-3 px-3 py-2 transition-all duration-300 ease-in-out delay-150',
+          position === 0 ? '' : 'mt-2 bg-background/70  shadow-sm backdrop-blur-[1px]',
+        )}
+      >
+        <nav
+          id="primary-navigation"
+          aria-labelledby="primary-navigation-label"
+          className="flex flex-1 justify-between items-center"
+        >
+          <span id="primary-navigation-label" className="sr-only">
+            Primary Navigation
+          </span>
           <Link
             to={'/'}
             aria-labelledby="go-home-link"
@@ -63,7 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({ setHeaderHeight }) => {
                   variant={'link'}
                   className={cn(
                     'text-foreground/80 decoration-2 decoration-emerald-400 underline-offset-4 text-lg',
-                    location.pathname === link.href && 'bg-muted/80',
+                    location.pathname === link.href && 'bg-muted-foreground/40',
                   )}
                 >
                   <Link to={link.href}>
