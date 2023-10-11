@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Mobile Infantry';
+  src: url('/fonts/mobileinfantry.ttf');
+}
+
+@font-face {
+  font-family: 'Dela Gothic One';
+  src: url('/fonts/DelaGothicOne-Regular.ttf') format('truetype');
+}
