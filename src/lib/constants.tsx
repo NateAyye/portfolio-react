@@ -70,7 +70,50 @@ export const technologies = [
   },
 ];
 
-export const projects = [
+const tags = [
+  'React',
+  'Next.js',
+  'Gatsby',
+  'GraphQL',
+  'TypeScript',
+  'JavaScript',
+  'HTML',
+  'CSS',
+  'TailwindCSS',
+  'Chakra UI',
+  'Framer Motion',
+  'Node.js',
+  'Express',
+  'MongoDB',
+  'PostgreSQL',
+  'Prisma',
+  'Supabase',
+  'VSCode',
+  'Theme',
+  'DayJS',
+  'Firebase',
+  'AWS',
+  'Vercel',
+  'Styled Components',
+] as const;
+
+export type Tag = (typeof tags)[number];
+
+export interface Project {
+  title: string;
+  description: string;
+  image_light: string;
+  image_dark: string;
+  featured: boolean;
+  tags: Tag[];
+  links: {
+    label: string;
+    url: string;
+    icon?: React.ReactNode | string;
+  }[];
+}
+
+export const projects: Project[] = [
   {
     title: 'Design Depo',
     featured: true,
