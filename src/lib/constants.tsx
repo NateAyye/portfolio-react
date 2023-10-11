@@ -1,4 +1,4 @@
-import { CardStackIcon, GitHubLogoIcon } from '@radix-ui/react-icons';
+import { CardStackIcon, GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
 
 export const navbarLinks = [
   {
@@ -181,5 +181,33 @@ export const projects: Project[] = [
         icon: `→`,
       },
     ],
+  },
+];
+
+export type FooterLink = {
+  label: string;
+  url: string;
+  icon: React.ReactNode | string;
+  bg?: string;
+};
+
+export const footerLinks: FooterLink[] = [
+  {
+    label: 'GitHub',
+    bg: 'bg-gray-500',
+    url: 'https://github.com/NateAyye',
+    icon: <GitHubLogoIcon className="w-20 h-20" />,
+  },
+  {
+    label: 'Linked In',
+    bg: 'bg-blue-500',
+    url: 'https://www.linkedin.com/in/nathan-cuevas/',
+    icon: <LinkedInLogoIcon className="w-20 h-20" />,
+  },
+  {
+    label: 'Youtube',
+    bg: 'bg-red-500',
+    url: 'https://www.youtube.com/@nathancuevas2298',
+    icon: <img width={80} height={80} src="images/icons/youtube.svg" />,
   },
 ];
