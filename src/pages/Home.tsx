@@ -62,14 +62,14 @@ const Home: React.FC<HomeProps> = () => {
       <HeroSection />
 
       <section className="max-w-screen-2xl mx-auto px-5 py-10">
-        <h2 className="text-4xl font-dela tracking-wide bg-accent2-300/60 text-emerald-400 w-fit mx-auto rounded-lg px-5 py-3">
+        <h2 className="text-4xl font-dela tracking-wide bg-accent2-300/60 text-emerald-500 w-fit mx-auto rounded-lg px-5 py-3 mb-40">
           Technologies
         </h2>
         <motion.div
           variants={staggerVariants}
           initial={'closed'}
           whileInView={'open'}
-          className="grid grid-cols-2 px-6 md:grid-cols-4 lg:grid-cols-6 my-20 gap-6 max-w-7xl mx-auto font-semibold text-xl text-white/90"
+          className="grid grid-cols-2 px-6 md:grid-cols-4 lg:grid-cols-6 my-20 gap-6 max-w-7xl mx-auto font-semibold text-xl  text-white/90"
         >
           {technologies.map((tech) => (
             <motion.div
@@ -90,7 +90,10 @@ const Home: React.FC<HomeProps> = () => {
         </motion.div>
       </section>
 
-      <section className="px-5 py-10 pt-40 relative bg-gradient-to-br from-accent2-500 from-0% via-accent2-400 via-30% to-blue-600 to-100%">
+      <section
+        id="featured-projects"
+        className="px-5 py-10 pt-40 relative bg-gradient-to-br from-accent2-500 from-0% via-accent2-400 via-30% to-blue-600 to-100%"
+      >
         <ShapeDivider
           side="top"
           height={143}
@@ -128,7 +131,7 @@ const Home: React.FC<HomeProps> = () => {
                   }
                 >
                   <img
-                    alt="developer at work"
+                    alt={project.title + ' Project Example'}
                     src={`images/projects/${
                       imageTheme === 'light' ? project.image_light : project.image_dark
                     }`}
