@@ -208,6 +208,6 @@ export const footerLinks: FooterLink[] = [
     label: 'Youtube',
     bg: 'bg-red-500',
     url: 'https://www.youtube.com/@nathancuevas2298',
-    icon: <img width={80} height={80} src="images/icons/youtube.svg" />,
+    icon: <img alt="youtube logo" width={80} height={80} src="images/icons/youtube.svg" />,
   },
 ];
