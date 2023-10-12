@@ -112,6 +112,7 @@ const Navbar: React.FC<NavbarProps> = () => {
             <div className="flex flex-col justify-evenly flex-1">
               {navbarLinks.map((link) => (
                 <Link
+                  key={link.name}
                   to={link.href}
                   onClick={() => setSheetOpen(false)}
                   className="text-6xl  text-center font-dela hover:text-7xl focus:text-7xl transition-all duration-300 ease-in-out"

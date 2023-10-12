@@ -12,6 +12,7 @@ const Footer: React.FC<FooterProps> = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3">
         {footerLinks.map((link) => (
           <Link
+            key={link.label}
             className={cn(
               'bg-gray-500 text-4xl font-dela text-white/80 font-bold flex justify-center items-center gap-5 py-6 px-3',
               link.bg,
