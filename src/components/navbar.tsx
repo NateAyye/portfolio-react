@@ -2,10 +2,20 @@ import { useAppContext } from '@/context/use-context';
 import useScroll from '@/hooks/use-scroll';
 import { navbarLinks } from '@/lib/constants';
 import { cn } from '@/lib/utils';
+import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ModeToggle } from './mode-toggle';
 import { Button } from './ui/button';
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from './ui/sheet';
 
 interface NavbarProps {}
 
@@ -14,6 +24,7 @@ const Navbar: React.FC<NavbarProps> = () => {
   const location = useLocation();
   const { direction, position } = useScroll(20);
   const headerRef = React.useRef<HTMLHeadElement>(null);
+  const [sheetOpen, setSheetOpen] = React.useState(false);
 
   useEffect(() => {
     if (!headerRef.current) return;
@@ -67,7 +78,7 @@ const Navbar: React.FC<NavbarProps> = () => {
               Nathan Cuevas
             </span>
           </Link>
-          <ul className="flex gap-3">
+          <ul className="hidden md:flex gap-3 ">
             {navbarLinks.map((link) => (
               <li key={link.name}>
                 <Button
@@ -87,6 +98,44 @@ const Navbar: React.FC<NavbarProps> = () => {
           </ul>
         </nav>
         <ModeToggle />
+        <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
+          <SheetTrigger asChild className="md:hidden">
+            <Button size={'icon'} variant="outline">
+              <span className="sr-only">Open Menu</span>
+              <HamburgerMenuIcon />
+            </Button>
+          </SheetTrigger>
+          <SheetContent className="min-w-[90vw] bg-background/90 border-0 flex flex-col itmes-center">
+            <SheetHeader>
+              <SheetTitle className="text-5xl text-center">🖐️ Welcome, </SheetTitle>
+            </SheetHeader>
+            <div className="flex flex-col justify-evenly flex-1">
+              {navbarLinks.map((link) => (
+                <Link
+                  to={link.href}
+                  onClick={() => setSheetOpen(false)}
+                  className="text-6xl  text-center font-dela hover:text-7xl focus:text-7xl transition-all duration-300 ease-in-out"
+                >
+                  <b className="text-emerald-400">//</b>&nbsp;{link.name}
+                </Link>
+              ))}
+            </div>
+            <SheetFooter className="flex justify-between items-center">
+              <div>
+                <small>
+                  ❤️ Thanks for visiting, I hope you enjoyed your stay.{' '}
+                  <Button asChild variant={'link'} className="px-0 text-accent2-300">
+                    <a href="/contacts">Contact Me</a>
+                  </Button>{' '}
+                  with any questions or concerns, <b>Thank you</b>.
+                </small>
+              </div>
+              <SheetClose asChild>
+                <Button variant={'ghost'}>Cancel</Button>
+              </SheetClose>
+            </SheetFooter>
+          </SheetContent>
+        </Sheet>
       </div>
     </header>
   );
