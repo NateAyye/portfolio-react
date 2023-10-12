@@ -33,11 +33,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <section className="relative h-full" style={{ paddingBottom: `${descriptionHeight / 2}px` }}>
       <img
-        alt="developer at work"
+        alt={title + ' Project Example'}
         src={`images/projects/${imageTheme === 'light' ? image_light : image_dark}`}
         className=" rounded-xl"
       />
-      <div className=" absolute z-50 bottom-0 w-full bg-background  ">
+      <div className=" absolute z-50 bottom-0 w-full bg-background">
         <div ref={descriptionRef} className="relative px-5 py-2 shadow-[0_-10px_10px_-5px_#0003]">
           <div className="absolute bottom-full left-0 w-4 h-4 bg-[radial-gradient(circle_at_100%_0%,_transparent_16px,_hsl(var(--background))_16px)]"></div>
           <div className="absolute bottom-full right-0 w-4 h-4 bg-[radial-gradient(circle_at_0%_0%,_transparent_16px,_hsl(var(--background))_16px)]"></div>
@@ -48,8 +48,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <div>
             {links.map((link) => (
               <Button key={link.label} variant={'link'} asChild>
-                <Link to={link.url}>
-                  <b className="text-emerald-400">//</b>&nbsp;{link.label}&nbsp;
+                <Link to={link.url} className="font-bold">
+                  <b className="text-emerald-900">//</b>&nbsp;{link.label}&nbsp;
                   {link.icon}
                 </Link>
               </Button>
