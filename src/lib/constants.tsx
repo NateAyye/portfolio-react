@@ -70,10 +70,9 @@ export const technologies = [
   },
 ];
 
-const tags = [
+export const tags = [
   'React',
   'Next.js',
-  'Gatsby',
   'GraphQL',
   'TypeScript',
   'JavaScript',
@@ -121,7 +120,7 @@ export const projects: Project[] = [
       "Our app offers an extensive repository of hex codes, ensuring that you'll never run out of unique colors and gradients to elevate your projects. With our user-friendly interface, you can organize your creative assets by saving individual hex codes, gradients, and fonts to your personal library.",
     image_dark: 'design-depo.png',
     image_light: 'design-depo_light.png',
-    tags: ['GraphQL', 'React'],
+    tags: ['GraphQL', 'React', 'TailwindCSS', 'Node.js', 'Express', 'MongoDB'],
     links: [
       {
         label: 'View Code',
