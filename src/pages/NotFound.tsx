@@ -18,7 +18,7 @@ const NotFound: React.FC<NotFoundProps> = () => {
         <div>
           <p className="text-xl font-dela">Try going back to the</p>
           <a href="/" className="text-xl text-emerald-300 font-dela underline">
-            &larr; homepage
+            &larr; Homepage
           </a>
         </div>
       </section>
