@@ -18,6 +18,8 @@ import designDepo from '@/assets/projects/design-depo.png';
 import designDepoLight from '@/assets/projects/design-depo_light.png';
 import githubTheme from '@/assets/projects/githubTheme_1.png';
 import githubThemeLight from '@/assets/projects/githubTheme_2.png';
+import textEditor from '@/assets/projects/textEditor_1.png';
+import textEditorLight from '@/assets/projects/textEditor_2.png';
 import weatherForcast from '@/assets/projects/weather_forcast_1.png';
 import weatherForcastLight from '@/assets/projects/weather_forcast_2.png';
 
@@ -104,6 +106,7 @@ export const tags = [
   'PostgreSQL',
   'Prisma',
   'Supabase',
+  'Webpack',
   'VSCode',
   'Theme',
   'DayJS',
@@ -194,6 +197,27 @@ export const projects: Project[] = [
       {
         label: 'Go To Live Site',
         url: 'https://nateayye.github.io/5-day-forecast/',
+        icon: `→`,
+      },
+    ],
+  },
+  {
+    title: 'Local Text Editor',
+    featured: false,
+    description:
+      'A text editor that allows you to save your work locally and save your work, It also has code highlighting to you can take your notes in the color and style that you recognize.',
+    image_dark: textEditor,
+    image_light: textEditorLight,
+    tags: ['HTML', 'CSS', 'JavaScript', 'Webpack', 'Express', 'Node.js'],
+    links: [
+      {
+        label: 'View Code',
+        url: 'https://github.com/NateAyye/local-text-editor-pwa',
+        icon: <GitHubLogoIcon />,
+      },
+      {
+        label: 'Go To Live Site',
+        url: 'https://still-waters-26108-e681736f7556.herokuapp.com/',
         icon: `→`,
       },
     ],
