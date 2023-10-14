@@ -62,7 +62,7 @@ const Home: React.FC<HomeProps> = () => {
       <HeroSection />
 
       <section className="max-w-screen-2xl mx-auto px-5 py-10">
-        <h2 className="text-4xl font-dela tracking-wide bg-accent2-300/60 text-emerald-500 w-fit mx-auto rounded-lg px-5 py-3 mb-40">
+        <h2 className="text-4xl font-dela text-center tracking-wide bg-accent2-300/60 text-emerald-500 w-fit mx-auto rounded-lg px-5 py-3 mb-40">
           Technologies
         </h2>
         <motion.div
@@ -101,7 +101,7 @@ const Home: React.FC<HomeProps> = () => {
           type="wave-opacity"
           color="hsl(var(--background))"
         />
-        <h2 className="text-4xl mb-40 font-dela tracking-wide bg-accent2-300/60 text-emerald-400 w-fit mx-auto rounded-lg px-5 py-3">
+        <h2 className="text-4xl text-center mb-40 font-dela tracking-wide bg-accent2-300/60 text-emerald-400 w-fit mx-auto rounded-lg px-5 py-3">
           Featured Projects
         </h2>
         <div className="lg:space-y-40">
@@ -162,7 +162,7 @@ const Home: React.FC<HomeProps> = () => {
           <Button
             asChild
             size={'lg'}
-            className="text-3xl font-dela py-8 hover:bg-emerald-200 focus:bg-emerald-200 bg-emerald-300 text-accent2-600 shadow-lg"
+            className="text-3xl text-center font-dela py-8 hover:bg-emerald-200 focus:bg-emerald-200 bg-emerald-300 text-accent2-600 shadow-lg"
           >
             <Link to={'/projects'}>More Projects...</Link>
           </Button>
