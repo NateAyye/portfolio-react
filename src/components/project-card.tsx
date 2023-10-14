@@ -34,7 +34,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <section className="relative h-full" style={{ paddingBottom: `${descriptionHeight / 2}px` }}>
       <img
         alt={title + ' Project Example'}
-        src={`images/projects/${imageTheme === 'light' ? image_light : image_dark}`}
+        src={imageTheme === 'light' ? image_light : image_dark}
         className=" rounded-xl"
       />
       <div className=" absolute z-50 bottom-0 w-full bg-background">
