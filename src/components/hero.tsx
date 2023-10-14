@@ -60,7 +60,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               className="text-background/80 decoration-2 decoration-emerald-400 underline-offset-8 text-lg"
             >
               <a href="/about">
-                <b className="text-emerald-400">//</b>&nbsp;Meet Me
+                <b className="text-emerald-400">//</b>&nbsp;Contact Me
               </a>
             </Button>
             <Button
