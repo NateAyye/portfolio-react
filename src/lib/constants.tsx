@@ -1,5 +1,19 @@
 import { CardStackIcon, GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
 
+import figmaIcon from '@/assets/icons/figma.svg';
+import githubIcon from '@/assets/icons/github.svg';
+import javascriptIcon from '@/assets/icons/javascript.svg';
+import jestIcon from '@/assets/icons/jest.svg';
+import mongoIcon from '@/assets/icons/mongodb.svg';
+import nodeIcon from '@/assets/icons/node.svg';
+import notionIcon from '@/assets/icons/notion.svg';
+import npmIcon from '@/assets/icons/npm.svg';
+import reactIcon from '@/assets/icons/react.svg';
+import sassIcon from '@/assets/icons/sass.svg';
+import typescriptIcon from '@/assets/icons/typescript.svg';
+import webpackIcon from '@/assets/icons/webpack.svg';
+import youtubeIcon from '@/assets/icons/youtube.svg';
+
 export const navbarLinks = [
   {
     name: 'Home',
@@ -18,51 +32,51 @@ export const navbarLinks = [
 export const technologies = [
   {
     name: 'Figma',
-    icon: '/images/icons/figma.svg',
+    icon: figmaIcon,
   },
   {
     name: 'Github',
-    icon: '/images/icons/github.svg',
+    icon: githubIcon,
   },
   {
     name: 'Notion',
-    icon: '/images/icons/notion.svg',
+    icon: notionIcon,
   },
   {
     name: 'Javascript',
-    icon: '/images/icons/javascript.svg',
+    icon: javascriptIcon,
   },
   {
     name: 'Jest',
-    icon: '/images/icons/jest.svg',
+    icon: jestIcon,
   },
   {
     name: 'MongoDB',
-    icon: '/images/icons/mongodb.svg',
+    icon: mongoIcon,
   },
   {
     name: 'Node',
-    icon: '/images/icons/node.svg',
+    icon: nodeIcon,
   },
   {
     name: 'Npm',
-    icon: '/images/icons/npm.svg',
+    icon: npmIcon,
   },
   {
     name: 'React',
-    icon: '/images/icons/react.svg',
+    icon: reactIcon,
   },
   {
     name: 'Sass',
-    icon: '/images/icons/sass.svg',
+    icon: sassIcon,
   },
   {
     name: 'Typescript',
-    icon: '/images/icons/typescript.svg',
+    icon: typescriptIcon,
   },
   {
     name: 'Webpack',
-    icon: '/images/icons/webpack.svg',
+    icon: webpackIcon,
   },
 ];
 
@@ -203,6 +217,6 @@ export const footerLinks: FooterLink[] = [
     label: 'Youtube',
     bg: 'bg-red-500',
     url: 'https://www.youtube.com/@nathancuevas2298',
-    icon: <img alt="youtube logo" width={80} height={80} src="images/icons/youtube.svg" />,
+    icon: <img alt="youtube logo" width={80} height={80} src={youtubeIcon} />,
   },
 ];
