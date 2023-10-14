@@ -5,6 +5,10 @@ import { useAppContext } from '@/context/use-context';
 import { useTheme } from '@/hooks/use-theme';
 import { InfoCircledIcon } from '@radix-ui/react-icons';
 import { motion } from 'framer-motion';
+
+import heroAnimation from '@/assets/DevAtWork.gif';
+import heroBg from '@/assets/herobg.png';
+
 import React from 'react';
 
 interface HeroSectionProps {}
@@ -25,7 +29,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
       style={{
         position: 'relative',
         paddingTop: `${headerHeight}px`,
-        backgroundImage: `linear-gradient(${bgOverlayColor}, ${bgOverlayColor}), url("images/herobg.png")`,
+        backgroundImage: `linear-gradient(${bgOverlayColor}, ${bgOverlayColor}), url(${heroBg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         minHeight: `100vh`,
@@ -80,7 +84,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
             alt="developer at work"
-            src="images/DevAtWork.gif"
+            src={heroAnimation}
             width={500}
             height={500}
           />

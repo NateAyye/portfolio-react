@@ -14,6 +14,13 @@ import typescriptIcon from '@/assets/icons/typescript.svg';
 import webpackIcon from '@/assets/icons/webpack.svg';
 import youtubeIcon from '@/assets/icons/youtube.svg';
 
+import designDepo from '@/assets/projects/design-depo.png';
+import designDepoLight from '@/assets/projects/design-depo_light.png';
+import githubTheme from '@/assets/projects/githubTheme_1.png';
+import githubThemeLight from '@/assets/projects/githubTheme_2.png';
+import weatherForcast from '@/assets/projects/weather_forcast_1.png';
+import weatherForcastLight from '@/assets/projects/weather_forcast_2.png';
+
 export const navbarLinks = [
   {
     name: 'Home',
@@ -128,8 +135,8 @@ export const projects: Project[] = [
     featured: true,
     description:
       "Our app offers an extensive repository of hex codes, ensuring that you'll never run out of unique colors and gradients to elevate your projects. With our user-friendly interface, you can organize your creative assets by saving individual hex codes, gradients, and fonts to your personal library.",
-    image_dark: 'design-depo.png',
-    image_light: 'design-depo_light.png',
+    image_dark: designDepo,
+    image_light: designDepoLight,
     tags: ['GraphQL', 'React', 'TailwindCSS', 'Node.js', 'Express', 'MongoDB'],
     links: [
       {
@@ -154,8 +161,8 @@ export const projects: Project[] = [
     featured: true,
     description:
       'VSCode Color Theme Based of of the Github Dark Dimmed Token Color Customizations Theme. With some minor tweaks to the colors and some added syntax highlighting.',
-    image_dark: 'githubTheme_1.png',
-    image_light: 'githubTheme_2.png',
+    image_dark: githubTheme,
+    image_light: githubThemeLight,
     tags: ['VSCode', 'Theme'],
     links: [
       {
@@ -175,8 +182,8 @@ export const projects: Project[] = [
     featured: true,
     description:
       "Using the dayjs library, I was able to create a 5 day forecast that displays the current day's weather and the next 4 days. The app also displays the current time and date. Now If you are traveling or have common places you go. You can look it up with ease and if its saved you can just click on it and it will display the weather for that location.",
-    image_dark: 'weather_forcast_1.png',
-    image_light: 'weather_forcast_2.png',
+    image_dark: weatherForcast,
+    image_light: weatherForcastLight,
     tags: ['HTML', 'CSS', 'JavaScript', 'DayJS'],
     links: [
       {
