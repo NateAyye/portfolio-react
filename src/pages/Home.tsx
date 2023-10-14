@@ -132,9 +132,7 @@ const Home: React.FC<HomeProps> = () => {
                 >
                   <img
                     alt={project.title + ' Project Example'}
-                    src={`images/projects/${
-                      imageTheme === 'light' ? project.image_light : project.image_dark
-                    }`}
+                    src={imageTheme === 'light' ? project.image_light : project.image_dark}
                   />
                 </motion.div>
                 <motion.div
