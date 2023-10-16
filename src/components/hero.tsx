@@ -10,6 +10,7 @@ import heroAnimation from '@/assets/DevAtWork.gif';
 import heroBg from '@/assets/herobg.png';
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface HeroSectionProps {}
 
@@ -42,7 +43,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <small className="text-lg font-semibold bg-accent2-300/40 px-3 py-1.5 rounded-lg">
+          <small className="text-sm md:text-lg font-semibold bg-accent2-300/40 px-3 py-1.5 rounded-lg">
             👋 Hi, my name is <b>Nathan Cuevas</b>
           </small>
           <h1 className="text-3xl lg:text-5xl font-bold leading-[1.5em]">
@@ -63,18 +64,18 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               variant={'link'}
               className="text-background/80 decoration-2 decoration-emerald-400 underline-offset-8 text-lg"
             >
-              <a href="/contact">
+              <Link to="/contact">
                 <b className="text-emerald-400">//</b>&nbsp;Contact Me
-              </a>
+              </Link>
             </Button>
             <Button
               asChild
               variant={'link'}
               className="text-background/80 decoration-2 decoration-emerald-400 underline-offset-8 text-lg"
             >
-              <a href="#featured-projects">
+              <Link to="/#featured-projects">
                 <b className="text-emerald-400">//</b>&nbsp;Featured Projects
-              </a>
+              </Link>
             </Button>
           </div>
         </motion.div>

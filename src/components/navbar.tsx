@@ -115,7 +115,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                   key={link.name}
                   to={link.href}
                   onClick={() => setSheetOpen(false)}
-                  className="text-6xl  text-center font-dela hover:text-7xl focus:text-7xl transition-all duration-300 ease-in-out"
+                  className="text-4xl lg:text-6xl  text-center font-dela hover:text-5xl focus:text-5xl lg:hover:text-7xl lg:focus:text-7xl transition-all duration-300 ease-in-out"
                 >
                   <b className="text-emerald-400">//</b>&nbsp;{link.name}
                 </Link>
@@ -132,7 +132,13 @@ const Navbar: React.FC<NavbarProps> = () => {
                 </small>
               </div>
               <SheetClose asChild>
-                <Button variant={'ghost'}>Cancel</Button>
+                <Button
+                  size={'lg'}
+                  className="border border-destructive text-3xl hover:bg-destructive/70 hover:text-white"
+                  variant={'ghost'}
+                >
+                  Cancel
+                </Button>
               </SheetClose>
             </SheetFooter>
           </SheetContent>
