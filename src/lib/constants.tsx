@@ -14,6 +14,8 @@ import typescriptIcon from '@/assets/icons/typescript.svg';
 import webpackIcon from '@/assets/icons/webpack.svg';
 import youtubeIcon from '@/assets/icons/youtube.svg';
 
+import backendApi from '@/assets/projects/backend_api.png';
+import backendApiLight from '@/assets/projects/backend_api_2.png';
 import designDepo from '@/assets/projects/design-depo.png';
 import designDepoLight from '@/assets/projects/design-depo_light.png';
 import githubTheme from '@/assets/projects/githubTheme_1.png';
@@ -219,6 +221,22 @@ export const projects: Project[] = [
         label: 'Go To Live Site',
         url: 'https://still-waters-26108-e681736f7556.herokuapp.com/',
         icon: `→`,
+      },
+    ],
+  },
+  {
+    title: 'Social Media Backend API',
+    featured: false,
+    description:
+      'An Example of a Backend API Built with express and mongodb using mongoose as the ORM. This API is used to create, read, update, and delete posts and users. It also has a like and comment features.',
+    image_dark: backendApi,
+    image_light: backendApiLight,
+    tags: ['JavaScript', 'MongoDB', 'Express', 'Node.js'],
+    links: [
+      {
+        label: 'View Code',
+        url: 'https://github.com/NateAyye/new-twitter-api',
+        icon: <GitHubLogoIcon />,
       },
     ],
   },

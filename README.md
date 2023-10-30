@@ -5,14 +5,14 @@ Hello, I am Nathan Cueavs and I am a UC Davis Coding bootcamp graduate and have 
 ## Technologies used for this project
 
 - React [link](https://reactjs.org/)
-- Typescript ([Typescript](https://www.typescriptlang.org/))
-- Vite ([Vite](https://vitejs.dev/))
-- Tailwind CSS ([Tailwind CSS](https://tailwindcss.com/))
-- React Router ([React Router](https://reactrouter.com/))
-- Radix Icons ([Radix Icons](https://www.radix-ui.com/icons))
-- Shadcn/ui ([Shadcn/ui](https://ui.shadcn.com/))
-- Framer Motion ([Framer Motion](https://www.framer.com/motion/))
-- ZOD ([ZOD](https://zod.dev/))
+- Typescript [link](https://www.typescriptlang.org/)
+- Vite [link](https://vitejs.dev/)
+- Tailwind CSS [link](https://tailwindcss.com/)
+- React Router [link](https://reactrouter.com/)
+- Radix Icons [link](https://www.radix-ui.com/icons)
+- Shadcn/ui [link](https://ui.shadcn.com/)
+- Framer Motion [link](https://www.framer.com/motion/)
+- ZOD [link](https://zod.dev/)
 
 ## Contribution
 
